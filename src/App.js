@@ -15,14 +15,16 @@ function App() {
   };
 
   return (
-    <main className="container">
-      <header className="bg-primary bg-gradient text-white rounded-bottom">
-        <h1 className="text-center py-5 display-5">Delicious Food Recipes</h1>
+    <main className="container mt-5">
+      <header className="bg-primary bg-gradient text-white rounded-bottom p-4">
+        <h1 className="text-center display-5">Delicious Food Recipes</h1>
       </header>
       <RecipeList recipes={recipes} deleteRecipe={deleteRecipe} />
       <RecipeCreate addRecipe={addRecipe} />
     </main>
   );
+  
 }
+
 
 export default App;

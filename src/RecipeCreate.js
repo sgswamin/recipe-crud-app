@@ -30,68 +30,86 @@ function RecipeCreate({ addRecipe }) {
   };
 
   return (
-    <form name="create" onSubmit={handleSubmit} className="mb-4">
-      <div className="form-group">
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          className="form-control"
-          id="name"
-          name="name"
-          value={recipe.name}
-          onChange={handleChange}
-          required
-        />
+    <form name="create" onSubmit={handleSubmit} className="mt-5">
+      <h2>Add a new Recipe</h2>
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-md-3 p-3">
+          
+            <input
+              type="text"
+              id="name"
+              name="name"
+              className="form-control"
+              placeholder="Name"
+              onChange={handleChange}
+              value={recipe.name}
+              required
+            />
+          </div>
+          <div className="col-md-3 p-3">
+            <input
+              type="text"
+              id="cuisine"
+              name="cuisine"
+              className="form-control"
+              placeholder="Cuisine"
+              onChange={handleChange}
+              value={recipe.cuisine}
+              required
+            />
+          </div>
+          <div className="col-md-3 p-3">
+          
+            <input
+              type="text"
+              id="photo"
+              name="photo"
+              className="form-control"
+              placeholder="URL"
+              onChange={handleChange}
+              value={recipe.photo}
+              required
+            />
+          </div>
+        </div>
       </div>
-      <div className="form-group">
-        <label htmlFor="cuisine">Cuisine</label>
-        <input
-          type="text"
-          className="form-control"
-          id="cuisine"
-          name="cuisine"
-          value={recipe.cuisine}
-          onChange={handleChange}
-          required
-        />
+      
+      <div className="row align-items-center pl-3">
+        <div className="col-md-3 p-3">
+          
+          <textarea
+            id="ingredients"
+            name="ingredients"
+            className="form-control"
+            placeholder="Ingredients"
+            onChange={handleChange}
+            value={recipe.ingredients}
+            required
+          />
+        </div>
+        <div className="col-md-3 p-3">
+          
+          <textarea
+            id="preparation"
+            name="preparation"
+            className="form-control"
+            placeholder="Preparation"
+            onChange={handleChange}
+            value={recipe.preparation}
+            required
+          />
+        </div>
+      
+        <div className="col-md-3">
+          <button type="submit" className="btn btn-lg btn-primary btn-md-block">
+            Create
+          </button>
+        </div>
       </div>
-      <div className="form-group">
-        <label htmlFor="photo">Photo URL</label>
-        <input
-          type="text"
-          className="form-control"
-          id="photo"
-          name="photo"
-          value={recipe.photo}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="ingredients">Ingredients</label>
-        <textarea
-          className="form-control"
-          id="ingredients"
-          name="ingredients"
-          value={recipe.ingredients}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="preparation">Preparation</label>
-        <textarea
-          className="form-control"
-          id="preparation"
-          name="preparation"
-          value={recipe.preparation}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <button type="submit" className="btn btn-primary">Create</button>
     </form>
   );
+
 }
 
 export default RecipeCreate;
