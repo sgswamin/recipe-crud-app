@@ -1,6 +1,7 @@
 import React from 'react';
 
 function RecipeRow({ recipe, deleteRecipe }) {
+  console.log(recipe.photo);
   return (
     <tr>
       <td>{recipe.name}</td>
